@@ -23,7 +23,7 @@ router.post('/update/:id', async (req, res) => {
   res.redirect('/')
 })
 
-router.put('/edit/:id', async (req, res) => {
+router.get('/edit/:id', async (req, res) => {
   const userData = await user.findById(req.params.id)
   res.render('edit', { user: userData })
 })
